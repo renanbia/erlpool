@@ -65,7 +65,7 @@
 %% @doc <a href="http://www.erlang.org/doc/man/gen_server.html#Module:init-1">gen_server:init/1</a>
 %% 
 init({Options, Factory_module, Resource_metadata}) ->
-  Max_active = get_option_value(max_active, Options, 8),
+  Max_active = get_option_value(max_active, Options, 10000),
   State = #state{
             max_active = Max_active,
             max_idle = get_option_value(max_idle, Options, Max_active),
